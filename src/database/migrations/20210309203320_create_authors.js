@@ -1,6 +1,6 @@
 
-exports.up = function(knex) {
-    return knex.schema.createTable('authors', function(table) {
+exports.up = function (knex) {
+    return knex.schema.createTable('authors', function (table) {
         table.increments('id').primary();
         table.string('name').notNullable();
         table.string('email').notNullable();
@@ -10,6 +10,6 @@ exports.up = function(knex) {
     })
 };
 
-exports.down = function(knex) {
+exports.down = function (knex) {
     return knex.schema.dropTable('authors');
 };
