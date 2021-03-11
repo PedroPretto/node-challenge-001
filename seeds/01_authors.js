@@ -11,7 +11,7 @@ exports.seed = function(knex) {
           picture: '/img/pedro.jpg',
           email: 'pedro@gmail.com',
           password: 'hardpassword',
-          isAdmin: true,
+          is_admin: true,
         },
         {
           id: 2,
@@ -19,15 +19,15 @@ exports.seed = function(knex) {
           picture: '/img/joao.jpg',
           email: 'joao@gmail.com',
           password: 'hardpassword',
-          isAdmin: true,
+          is_admin: true,
         },{
           id: 3,
           name: 'Dndrio',
           picture: '/img/andrio.jpg',
           email: 'andrio@gmail.com',
           password: 'hardpassword',
-          isAdmin: true,
+          is_admin: true,
         },
-      ]);
-    });
-};
+      ])
+    })
+}

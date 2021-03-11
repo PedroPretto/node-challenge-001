@@ -31,6 +31,6 @@ exports.seed = function(knex) {
           first_paragraph: 'firstParagraph3',
           body: 'articleBody3',
         },
-      ]);
-    });
-};
+      ])
+    })
+}
