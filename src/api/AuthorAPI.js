@@ -8,8 +8,7 @@ module.exports = {
   },
   login: async (req, res) => {
     const message = await services.authorLogin(req.body)
-    
-    return res.status(message.code).json({data: message.data, token: message.token})
+    return res.status(message.code).json(message.data)
   },
   delete: async (req, res) => {
     const token = req.header('token')
@@ -34,6 +33,6 @@ module.exports = {
     const is_admin = (req.header('is_admin') === 'true')
 
     const message = await services.authorIndex(token, is_admin)
-    return res.status(message.code).json({data: message.data})
+    return res.status(message.code).json(message.data)
   }
 }

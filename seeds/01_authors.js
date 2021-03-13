@@ -22,7 +22,7 @@ exports.seed = function(knex) {
           is_admin: true,
         },{
           id: 3,
-          name: 'Dndrio',
+          name: 'Andrio',
           picture: '/img/andrio.jpg',
           email: 'andrio@gmail.com',
           password: 'hardpassword',

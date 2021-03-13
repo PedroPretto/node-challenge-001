@@ -45,17 +45,23 @@ module.exports = {
       })
     }
 
-    const [{id, email, password}] = await db.getAuthorByEmail(data.email)
+    const [{id, email, password, is_admin}] = await db.getAuthorByEmail(data.email)
     if(data.email === email && sha1(data.password) === password){
       const token = jwt.sign({id: id}, config.secret, {
         expiresIn: 300
       })
       return({
         code:200,
-        data: 'Successfully logged in',
-        token
+        data: {
+          token,
+          is_admin
+        }
       })
     }
+    return({
+      code:400,
+      data: 'Sorry, email and/or password are wrong!'
+    })
   },
 
   authorDelete: async(id, token, is_admin) => {

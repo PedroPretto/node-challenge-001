@@ -10,7 +10,7 @@ module.exports = {
   },
 
   getAuthorByEmail: async(email) => {
-    return await connection('authors').select('id','email', 'password').where('email', email)
+    return await connection('authors').select('id','email', 'password', 'is_admin').where('email', email)
   },
 
   getAuthorById: async(id) => {
